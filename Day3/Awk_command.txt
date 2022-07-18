@@ -37,7 +37,18 @@ The TotalPay aggregate of all the employees whose job title is CAPTAIN = 1171796
 
 
 TASK NO - 03
+
 cat data.csv | awk '{if($5 > 7000 && $5 < 10000) {print $3 " " $5}}'
 
 DEPUTYCHIEF 9737
 ASSTDEPUTY 8601
+
+
+
+
+TASK NO - 04
+
+cat data.csv | awk '{sum = sum + $4} END{print "The average BasePay = " sum/NR}'
+
+The average BasePay = 157972
+	
